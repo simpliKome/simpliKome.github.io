@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The Niche Navigator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="solid" id="main-nav">
+      <!-- Changed to solid by default -->
+      <div class="logo" onclick="goTop()">Niche Navigator</div>
+      <nav class="desktop-nav">
+        <a href="#niches">Niches</a>
+        <a href="#featured">Articles</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions desktop-nav">
+        <button class="btn-outline">Login</button>
+        <button class="btn-primary">Sign Up</button>
+      </div>
+      <div class="mobile-icons">
+        <div class="hamburger">&#9776;</div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>
+          Illuminate Your Niche. Discover Your Passion.<br class="hidden-lg" />
+          The Niche Navigator.
+        </h1>
+        <p>
+          Dive deep into specialized topics, uncover fresh insights, and join a
+          community passionate about what truly matters to you.
+        </p>
+        <div class="buttons">
+          <button class="btn-hero btn-primary-hero">Explore Niches</button>
+          <button
+            class="btn-hero btn-outline-hero"
+            onclick="scrollToSection('latest')"
+          >
+            Read Latest Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTICLES -->
+    <section id="featured" class="container">
+      <h2>Featured Reads: Editor's Picks</h2>
+      <div class="carousel">
+        <button class="carousel-arrow left" onclick="moveCarousel(-1)">
+          ‹
+        </button>
+        <div class="carousel-track" id="carousel-track">
+          <!-- Example cards - will be dynamically loaded/updated by JS -->
+          <div class="carousel-card">
+            <img
+              src="https://placehold.co/300x180/0056B3/FFFFFF?text=Article+1"
+              alt="Featured article"
+            />
+            <span class="badge">TECHNOLOGY</span>
+            <h3>Innovations in AI</h3>
+            <div class="meta">By Jane Doe · June 10 · 5 min read</div>
+            <p>
+              How AI is redefining industries in 2025 with new breakthroughs.
+            </p>
+            <button class="btn-article">Read Article</button>
+          </div>
+          <div class="carousel-card">
+            <img
+              src="https://placehold.co/300x180/FFC107/212529?text=Article+2"
+              alt="Featured article"
+            />
+            <span class="badge">LITERATURE</span>
+            <h3>Rediscovering Classic Fiction</h3>
+            <div class="meta">By John Smith · June 2 · 7 min read</div>
+            <p>
+              A journey into tales that continue to shape our world and thought.
+            </p>
+            <button class="btn-article">Read Article</button>
+          </div>
+          <div class="carousel-card">
+            <img
+              src="https://placehold.co/300x180/212529/F8F9FA?text=Article+3"
+              alt="Featured article"
+            />
+            <span class="badge">HEALTH</span>
+            <h3>The Science of Wellness</h3>
+            <div class="meta">By Emily White · May 28 · 8 min read</div>
+            <p>
+              Understanding holistic approaches to a healthier, balanced life.
+            </p>
+            <button class="btn-article">Read Article</button>
+          </div>
+          <div class="carousel-card">
+            <img
+              src="https://placehold.co/300x180/0056B3/FFFFFF?text=Article+4"
+              alt="Featured article"
+            />
+            <span class="badge">FINANCE</span>
+            <h3>Decoding Crypto Trends</h3>
+            <div class="meta">By Michael Brown · May 20 · 10 min read</div>
+            <p>
+              Insights into the volatile world of cryptocurrencies and
+              blockchain.
+            </p>
+            <button class="btn-article">Read Article</button>
+          </div>
+        </div>
+        <button class="carousel-arrow right" onclick="moveCarousel(1)">
+          ›
+        </button>
+      </div>
+    </section>
+
+    <!-- DIVE INTO YOUR NICHE -->
+    <section id="niches" class="niches container">
+      <h2>Dive Into Your Niche</h2>
+      <p style="margin-bottom: 2rem">
+        Explore the topics that ignite your curiosity and fuel your passion,
+        expertly curated for you.
+      </p>
+      <div class="grid">
+        <!-- Example niche -->
+        <div class="niche-card">
+          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
+            />
+          </svg>
+          <h3>Technology</h3>
+          <p>
+            The latest trends and deep dives into tech innovations shaping the
+            future.
+          </p>
+          <button class="btn-niche">Explore Niche</button>
+        </div>
+        <div class="niche-card">
+          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
+            />
+          </svg>
+          <h3>Art & Culture</h3>
+          <p>
+            Stories that shape the human experience, from classical arts to
+            modern expressions.
+          </p>
+          <button class="btn-niche">Explore Niche</button>
+        </div>
+        <div class="niche-card">
+          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
+            />
+          </svg>
+          <h3>Personal Growth</h3>
+          <p>
+            Strategies and insights for self-improvement and holistic
+            well-being.
+          </p>
+          <button class="btn-niche">Explore Niche</button>
+        </div>
+        <div class="niche-card">
+          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
+            />
+          </svg>
+          <h3>World Travel</h3>
+          <p>
+            Discover breathtaking destinations and practical tips for global
+            adventurers.
+          </p>
+          <button class="btn-niche">Explore Niche</button>
+        </div>
+      </div>
+      <button class="btn-primary" style="margin-top: 2rem">
+        View All Niches
+      </button>
+    </section>
+
+    <!-- LATEST ARTICLES -->
+    <section id="latest" class="container">
+      <h2>Latest Articles</h2>
+      <div class="articles-grid" id="article-grid">
+        <!-- Example article -->
+        <div class="article-card">
+          <img
+            src="https://placehold.co/300x180/FFC107/212529?text=Latest+1"
+            alt="Article"
+          />
+          <span class="badge">HEALTH</span>
+          <h3>Wellness in the Modern Age</h3>
+          <div class="meta">By Alex Green · June 8 · 6 min read</div>
+          <p>
+            Discover new habits that promote long-term health and balance in
+            daily life.
+          </p>
+          <div class="actions">
+            <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
+            <button class="icon-btn">🔗</button>
+          </div>
+        </div>
+        <div class="article-card">
+          <img
+            src="https://placehold.co/300x180/0056B3/FFFFFF?text=Latest+2"
+            alt="Article"
+          />
+          <span class="badge">SCIENCE</span>
+          <h3>The Mysteries of Dark Matter</h3>
+          <div class="meta">By Dr. S. Patel · June 7 · 9 min read</div>
+          <p>
+            An exploration into the elusive substance that holds galaxies
+            together.
+          </p>
+          <div class="actions">
+            <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
+            <button class="icon-btn">🔗</button>
+          </div>
+        </div>
+        <div class="article-card">
+          <img
+            src="https://placehold.co/300x180/212529/F8F9FA?text=Latest+3"
+            alt="Article"
+          />
+          <span class="badge">FOOD</span>
+          <h3>Future of Sustainable Agriculture</h3>
+          <div class="meta">By M. Sharma · June 5 · 7 min read</div>
+          <p>
+            Innovative farming techniques aimed at feeding the world
+            responsibly.
+          </p>
+          <div class="actions">
+            <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
+            <button class="icon-btn">🔗</button>
+          </div>
+        </div>
+      </div>
+      <div id="load-spinner" class="spinner" style="display: none"></div>
+    </section>
+
+    <!-- PERSONAL / SIGNUP SECTION -->
+    <section class="personal container">
+      <h2>Just For You, Reader</h2>
+      <p>
+        Recommendations based on your interests will appear here—join and
+        personalize your experience!
+      </p>
+      <button class="btn-primary">View All Recommendations</button>
+    </section>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <section id="newsletter" class="newsletter container">
+      <h3>Stay Updated. Get Exclusive Insights.</h3>
+      <p>
+        Join our weekly newsletter for hand-picked articles, niche trends, and
+        special updates.
+      </p>
+      <form onsubmit="subscribeNewsletter(event)">
+        <input type="email" placeholder="Enter your email address" required />
+        <button type="submit" class="btn-subscribe">Subscribe</button>
+      </form>
+      <p id="newsletter-message"></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section footer-logo-section">
+          <div class="logo">Niche Navigator</div>
+          <p>Your compass in the world of niche discovery.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Explore Blog</h4>
+          <a href="#latest">Latest Articles</a>
+          <a href="#niches">Niches</a>
+          <a href="#">Categories</a>
+        </div>
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <a href="#">Our Story</a>
+          <a href="#">The Team</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support & Legal</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom-section">
+        <div class="social-icons">
+          <a>👍</a><a>🐦</a><a>📸</a><a>▶️</a><a>🔗</a>
+        </div>
+        <p class="copyright">
+          (C) 2025 The Niche Navigator. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" onclick="goTop()">↑</button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
