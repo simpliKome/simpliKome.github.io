@@ -146,10 +146,20 @@ function loadMore() {
          <h3>${article.title}</h3>
          <div class="meta">${article.meta}</div>
          <p>${article.snippet}</p>
-         <div class="actions">
-           <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
-           <button class="icon-btn">🔗</button>
-         </div>`;
+          <div class="actions">
+            <button class="icon-btn">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-comment"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-share"></i>
+            </button>
+            <button class="icon-btn" onclick="toggleSave(this)">
+              <i class="fa-solid fa-bookmark"></i>
+            </button>
+          </div>`;
         articleGrid.append(card);
       });
       loadedArticleCount += articlesToAdd.length;
