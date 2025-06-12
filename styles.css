@@ -1,3 +1,32 @@
+/*
+  * Font Awesome icons used in the footer:
+
+ <i class="fa-brands fa-facebook-f"></i>
+ <i class="fa-brands fa-x-twitter"></i> 
+ <i class="fa-brands fa-linkedin-in"></i>
+ <i class="fa-brands fa-linkedin"></i>
+ <i class="fa-brands fa-instagram"></i>
+ <i class="fa-brands fa-square-instagram"></i>
+ <i class="fa-solid fa-microchip"></i>
+ <i class="fa-solid fa-palette"></i>
+ <i class="fa-solid fa-bezier-curve"></i>
+ <i class="fa-solid fa-gear"></i>
+ <i class="fa-solid fa-rocket"></i>
+ <i class="fa-solid fa-code"></i>
+ <i class="fa-solid fa-pen-to-square"></i>
+ <i class="fa-solid fa-book-open"></i>
+ <i class="fa-solid fa-clipboard-list"></i>
+ <i class="fa-solid fa-briefcase"></i>
+ <i class="fa-solid fa-people-group"></i>
+ <i class="fa-solid fa-people-arrows-left-right"></i>
+ <i class="fa-solid fa-people-roof"></i>
+ <i class="fa-solid fa-people-carry-box"></i>
+ <i class="fa-solid fa-plane"></i>
+ <i class="fa-solid fa-arrow-up-right-dots"></i>
+ <i class="fa-solid fa-link"></i> 
+ <i class="fa-regular fa-star"></i>
+ */
+
 /* ========== BASE STYLES ========== */
 :root {
   --color-primary: #0056b3;
@@ -26,6 +55,7 @@ a {
 }
 img {
   max-width: 100%;
+  height: auto;
   display: block;
   border-radius: 8px;
 }
@@ -36,9 +66,15 @@ button {
   transition: transform 0.15s, box-shadow 0.15s;
 }
 button:hover {
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
+  transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+} */
+
 .container {
   width: min(1200px, 95%);
   margin: 0 auto;
@@ -119,6 +155,15 @@ nav a:hover::after {
   font-weight: 600;
   border: none;
 }
+.niche-ball {
+  background-color: var(--color-primary);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -132,16 +177,23 @@ nav a:hover::after {
     gap: 1rem;
   }
   .hamburger {
+    display: block;
     font-size: 1.5rem;
     color: var(--color-white-off);
     cursor: pointer;
   } /* Changed to white-off */
+
+  /* New style that I just added to make the text of the hero section on mobile breatheabel */
+  .hero {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 /* ========== HERO ========== */
 .hero {
   position: relative;
-  padding: 6rem 0;
+  padding: 5rem o;
   text-align: center;
   color: var(--color-white-off);
   background: linear-gradient(135deg, #212529, #0056b3);
@@ -171,9 +223,15 @@ nav a:hover::after {
   display: none;
 } /* Changed class name for clarity */
 @media (min-width: 1024px) {
+  #main-nav > .mobile-icons {
+    /* This toggles off the hamburger display menu on desktop view */
+    display: none;
+  }
+
   .hero h1 {
     font-size: 3.5rem;
   }
+
   .hero h1 .hidden-lg {
     display: inline;
   } /* Changed class name for clarity */
@@ -336,6 +394,12 @@ section {
   color: var(--color-secondary);
   font-size: 2rem;
 }
+#niches > h2 + p {
+  margin-bottom: 2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  text-align: center;
+}
 .niches p {
   color: var(--color-lightgray);
 } /* Ensure clarity for intro paragraph */
@@ -345,6 +409,8 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   max-width: 1000px; /* Limit grid width */
   margin: 0 auto; /* Center grid */
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
   margin-top: 2rem; /* Add margin after paragraph */
 }
 .niche-card {
@@ -353,12 +419,6 @@ section {
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
   text-align: center;
-}
-.niche-card svg {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.75rem;
-  fill: var(--color-primary);
 }
 .niche-card h3 {
   font-size: 1.25rem;
@@ -402,6 +462,9 @@ section {
   padding: 0.3rem 0.5rem;
   font-size: 0.75rem;
   border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 .article-card h3 {
   margin: 1.5rem 0 0.75rem;
@@ -409,8 +472,9 @@ section {
   color: var(--color-text-main);
 }
 .article-card .meta {
-  font-size: 0.8rem;
-  color: var(--color-text-main);
+  font-size: 0.7rem;
+  /* color: var(--color-text-main); */
+  color: var(--color-muted); /* Changed to muted for better contrast */
   margin-bottom: 0.75rem;
 } /* Changed to text-main */
 .article-card p {
