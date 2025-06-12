@@ -3,39 +3,38 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="author" content="simpliKome">
-    <meta
-    	name="description"
-    	content="Your go-to source for daily insights. Our blog offers
-	engaging articles across a vast array of topics: tech, health,
-	finance, travel, lifestyle, and more.">
-    <meta name="theme-color" content="#0056b3">
-    <!-- OpenGraph Metatags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Daily Insights">
-    <meta property="og:url" content="https://simplikome.github.io/">
-    <meta property="og:image" content="">
-    <meta property="og:image:width" content="">
-    <meta property="og:image:height" content="">
-    <meta property="og:image:type" content="">
-    <meta property="og:image:alt" content="">
-    <meta property="og:description" content="">
-    <!-- Twitter Display metatags -->
-    <meta name="twitter:title" content="">
-    <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="">
     <title>The Niche Navigator</title>
+    <meta name="author" content="simpliKome" />
+    <meta
+      name="description"
+      content="Your go-to source for daily insights. Our blog offers 
+          engaging articles across a vast array of topics: tech, health,
+          finance, travel, sports, lifestyle, and more."
+    />
+    <meta name="theme-color" content="#0056b3" />
+    <!-- OpenGraph Metatags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Daily Insights" />
+    <meta property="og:url" content="https://simplikome.github.io/" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:width" content="" />
+    <meta property="og:image:height" content="" />
+    <meta property="og:image:type" content="" />
+    <meta property="og:image:alt" content="" />
+    <meta property="og:description" content="" />
+    <!-- Twitter Display metatags -->
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
@@ -45,7 +44,7 @@
       <!-- Changed to solid by default -->
       <div class="logo" onclick="goTop()">Niche Navigator</div>
       <nav class="desktop-nav">
-        <a href="#niches">Categories</a>
+        <a href="#niches">Niches</a>
         <a href="#featured">Articles</a>
         <a href="#newsletter">Newsletter</a>
         <a href="#about">About Us</a>
@@ -64,7 +63,7 @@
     <section class="hero">
       <div class="container hero-content">
         <h1>
-          Illuminate Your Spectrum. Discover Your Passion.<br class="hidden-lg" />
+          Illuminate Your Niche. Discover Your Passion.<br class="hidden-lg" />
           The Niche Navigator.
         </h1>
         <p>
@@ -72,7 +71,7 @@
           community passionate about what truly matters to you.
         </p>
         <div class="buttons">
-          <button class="btn-hero btn-primary-hero">Explore</button>
+          <button class="btn-hero btn-primary-hero">Explore Niches</button>
           <button
             class="btn-hero btn-outline-hero"
             onclick="scrollToSection('latest')"
@@ -99,12 +98,15 @@
             />
             <span class="badge">TECHNOLOGY</span>
             <h3>Innovations in AI</h3>
-            <div class="meta">By Jane Doe · June 10 · 5 min read</div>
+            <div class="meta">
+              By Jane Doe · <time datetime="06-10">June 10</time> · 5 min read
+            </div>
             <p>
               How AI is redefining industries in 2025 with new breakthroughs.
             </p>
             <button class="btn-article">Read Article</button>
           </div>
+
           <div class="carousel-card">
             <img
               src="https://placehold.co/300x180/FFC107/212529?text=Article+2"
@@ -112,12 +114,15 @@
             />
             <span class="badge">LITERATURE</span>
             <h3>Rediscovering Classic Fiction</h3>
-            <div class="meta">By John Smith · June 2 · 7 min read</div>
+            <div class="meta">
+              By John Smith · <time datetime="06-02">June 2</time> · 7 min read
+            </div>
             <p>
               A journey into tales that continue to shape our world and thought.
             </p>
             <button class="btn-article">Read Article</button>
           </div>
+
           <div class="carousel-card">
             <img
               src="https://placehold.co/300x180/212529/F8F9FA?text=Article+3"
@@ -125,12 +130,15 @@
             />
             <span class="badge">HEALTH</span>
             <h3>The Science of Wellness</h3>
-            <div class="meta">By Emily White · May 28 · 8 min read</div>
+            <div class="meta">
+              By Emily White · <time datetime="05-28">May 28</time> · 8 min read
+            </div>
             <p>
               Understanding holistic approaches to a healthier, balanced life.
             </p>
             <button class="btn-article">Read Article</button>
           </div>
+
           <div class="carousel-card">
             <img
               src="https://placehold.co/300x180/0056B3/FFFFFF?text=Article+4"
@@ -138,7 +146,10 @@
             />
             <span class="badge">FINANCE</span>
             <h3>Decoding Crypto Trends</h3>
-            <div class="meta">By Michael Brown · May 20 · 10 min read</div>
+            <div class="meta">
+              By Michael Brown · <time datetime="05-20">May 20</time> · 10 min
+              read
+            </div>
             <p>
               Insights into the volatile world of cryptocurrencies and
               blockchain.
@@ -155,18 +166,16 @@
     <!-- DIVE INTO YOUR NICHE -->
     <section id="niches" class="niches container">
       <h2>Dive Into Your Niche</h2>
-      <p style="margin-bottom: 2rem">
+      <p>
         Explore the topics that ignite your curiosity and fuel your passion,
         expertly curated for you.
       </p>
       <div class="grid">
-        <!-- Example niche -->
+        <!-- This is the niche container: it is a grid container -->
         <div class="niche-card">
-          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
-            />
-          </svg>
+          <div class="niche-ball">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
           <h3>Technology</h3>
           <p>
             The latest trends and deep dives into tech innovations shaping the
@@ -174,12 +183,11 @@
           </p>
           <button class="btn-niche">Explore Niche</button>
         </div>
+
         <div class="niche-card">
-          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
-            />
-          </svg>
+          <div class="niche-ball">
+            <i class="fa-solid fa-palette"></i>
+          </div>
           <h3>Art & Culture</h3>
           <p>
             Stories that shape the human experience, from classical arts to
@@ -187,12 +195,11 @@
           </p>
           <button class="btn-niche">Explore Niche</button>
         </div>
+
         <div class="niche-card">
-          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
-            />
-          </svg>
+          <div class="niche-ball">
+            <i class="fa-solid fa-arrow-up-right-dots"></i>
+          </div>
           <h3>Personal Growth</h3>
           <p>
             Strategies and insights for self-improvement and holistic
@@ -200,12 +207,11 @@
           </p>
           <button class="btn-niche">Explore Niche</button>
         </div>
+
         <div class="niche-card">
-          <svg fill="var(--color-primary)" viewBox="0 0 24 24">
-            <path
-              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"
-            />
-          </svg>
+          <div class="niche-ball">
+            <i class="fa-solid fa-plane"></i>
+          </div>
           <h3>World Travel</h3>
           <p>
             Discover breathtaking destinations and practical tips for global
@@ -231,14 +237,24 @@
           />
           <span class="badge">HEALTH</span>
           <h3>Wellness in the Modern Age</h3>
-          <div class="meta">By Alex Green · June 8 · 6 min read</div>
+          <div class="meta">By Alex Green • June 8 • 6 min read</div>
           <p>
             Discover new habits that promote long-term health and balance in
             daily life.
           </p>
           <div class="actions">
-            <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
-            <button class="icon-btn">🔗</button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-comment"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-share"></i>
+            </button>
+            <button class="icon-btn" onclick="toggleSave(this)">
+              <i class="fa-solid fa-bookmark"></i>
+            </button>
           </div>
         </div>
         <div class="article-card">
@@ -248,14 +264,24 @@
           />
           <span class="badge">SCIENCE</span>
           <h3>The Mysteries of Dark Matter</h3>
-          <div class="meta">By Dr. S. Patel · June 7 · 9 min read</div>
+          <div class="meta">By Dr. S. Patel • June 7 • 9 min read</div>
           <p>
             An exploration into the elusive substance that holds galaxies
             together.
           </p>
           <div class="actions">
-            <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
-            <button class="icon-btn">🔗</button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-comment"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-share"></i>
+            </button>
+            <button class="icon-btn" onclick="toggleSave(this)">
+              <i class="fa-solid fa-bookmark"></i>
+            </button>
           </div>
         </div>
         <div class="article-card">
@@ -265,14 +291,24 @@
           />
           <span class="badge">FOOD</span>
           <h3>Future of Sustainable Agriculture</h3>
-          <div class="meta">By M. Sharma · June 5 · 7 min read</div>
+          <div class="meta">By M. Sharma • June 5 • 7 min read</div>
           <p>
             Innovative farming techniques aimed at feeding the world
             responsibly.
           </p>
           <div class="actions">
-            <button class="icon-btn" onclick="toggleSave(this)">⭐</button>
-            <button class="icon-btn">🔗</button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-comment"></i>
+            </button>
+            <button class="icon-btn">
+              <i class="fa-solid fa-share"></i>
+            </button>
+            <button class="icon-btn" onclick="toggleSave(this)">
+              <i class="fa-solid fa-bookmark"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -332,15 +368,25 @@
       </div>
       <div class="footer-bottom-section">
         <div class="social-icons">
-          <a>👍</a><a>🐦</a><a>📸</a><a>▶️</a><a>🔗</a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a href="#" calss="social-link"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
         </div>
         <p class="copyright">
-          (C) 2025 The Niche Navigator. All rights reserved.
+          &copy; 2025 The Niche Navigator. All rights reserved.
         </p>
       </div>
     </footer>
 
-    <button id="back-to-top" class="back-to-top" onclick="goTop()">↑</button>
+    <button id="back-to-top" class="back-to-top" onclick="goTop()">
+      &UpArrow;
+    </button>
 
     <!-- ========== SCRIPTS ========== -->
     <script src="script.js"></script>
