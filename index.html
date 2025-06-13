@@ -1,394 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>The Niche Navigator</title>
-    <meta name="author" content="simpliKome" />
-    <meta
-      name="description"
-      content="Your go-to source for daily insights. Our blog offers 
-          engaging articles across a vast array of topics: tech, health,
-          finance, travel, sports, lifestyle, and more."
-    />
-    <meta name="theme-color" content="#0056b3" />
-    <!-- OpenGraph Metatags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Daily Insights" />
-    <meta property="og:url" content="https://simplikome.github.io/" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:width" content="" />
-    <meta property="og:image:height" content="" />
-    <meta property="og:image:type" content="" />
-    <meta property="og:image:alt" content="" />
-    <meta property="og:description" content="" />
-    <!-- Twitter Display metatags -->
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:creator" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Niche Navigator | Your Compass to Knowledge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Feather Icons for minimalist icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style></style>
   </head>
-  <body>
-    <!-- NAVBAR -->
-    <header class="solid" id="main-nav">
-      <!-- Changed to solid by default -->
-      <div class="logo" onclick="goTop()">Niche Navigator</div>
-      <nav class="desktop-nav">
+  <body class="antialiased">
+    <!-- I. Top Navigation Bar (Sticky) -->
+    <nav id="navbar">
+      <div class="container navbar-container">
+        <!-- Logo -->
+        <a href="#" class="logo-link">
+          <!-- NEW SVG LOGO: Stylized compass/star -->
+          <svg
+            class="logo-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path d="M12 15L16 8L9 9L12 15Z" fill="currentColor" />
+          </svg>
+
+          <!-- <svg
+            class="logo-icon"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="logo-grad"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" style="stop-color: #0056b3" />
+                <stop offset="100%" style="stop-color: #003d82" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M50 0 L61.8 38.2 L100 50 L61.8 61.8 L50 100 L38.2 61.8 L0 50 L38.2 38.2 Z"
+              fill="url(#logo-grad)"
+            />
+            <circle cx="50" cy="50" r="12" fill="#FFC107" />
+          </svg> -->
+          <span>The Niche <span class="navigator">Navigator</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links">
+          <a href="#niches">Niches</a>
+          <a href="#featured">Articles</a>
+          <a href="#features">Features</a>
+          <a href="#about">About Us</a>
+        </div>
+
+        <!-- Desktop Search Bar -->
+        <div class="desktop-search-container search-container">
+          <div class="search-bar-wrapper">
+            <i data-feather="search" class="search-icon"></i>
+            <input
+              type="text"
+              id="search-input-desktop"
+              class="search-input"
+              placeholder="Search..."
+            />
+          </div>
+          <div id="search-results-desktop" class="search-results">
+            <ul class="search-results-list"></ul>
+          </div>
+        </div>
+
+        <!-- Auth Buttons -->
+        <div class="nav-auth-buttons">
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="btn btn-signup">Sign Up</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="container">
+        <!-- Mobile Search Bar -->
+        <div
+          class="mobile-search-container search-container"
+          style="margin-top: 0; margin-bottom: 1rem"
+        >
+          <div class="search-bar-wrapper">
+            <i data-feather="search" class="search-icon"></i>
+            <input
+              type="text"
+              id="search-input-mobile"
+              class="search-input"
+              placeholder="Search for articles or niches..."
+            />
+          </div>
+          <div id="search-results-mobile" class="search-results">
+            <ul class="search-results-list"></ul>
+          </div>
+        </div>
+
         <a href="#niches">Niches</a>
         <a href="#featured">Articles</a>
-        <a href="#newsletter">Newsletter</a>
+        <a href="#features">Features</a>
         <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-actions desktop-nav">
-        <button class="btn-outline">Login</button>
-        <button class="btn-primary">Sign Up</button>
-      </div>
-      <div class="mobile-icons">
-        <div class="hamburger">&#9776;</div>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>
-          Illuminate Your Niche. Discover Your Passion.<br class="hidden-lg" />
-          The Niche Navigator.
-        </h1>
-        <p>
-          Dive deep into specialized topics, uncover fresh insights, and join a
-          community passionate about what truly matters to you.
-        </p>
-        <div class="buttons">
-          <button class="btn-hero btn-primary-hero">Explore Niches</button>
-          <button
-            class="btn-hero btn-outline-hero"
-            onclick="scrollToSection('latest')"
-          >
-            Read Latest Articles
-          </button>
+        <div class="auth-buttons-mobile">
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="btn btn-signup">Sign Up</a>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- FEATURED ARTICLES -->
-    <section id="featured" class="container">
-      <h2>Featured Reads: Editor's Picks</h2>
-      <div class="carousel">
-        <button class="carousel-arrow left" onclick="moveCarousel(-1)">
-          ‹
-        </button>
-        <div class="carousel-track" id="carousel-track">
-          <!-- Example cards - will be dynamically loaded/updated by JS -->
-          <div class="carousel-card">
-            <img
-              src="https://placehold.co/300x180/0056B3/FFFFFF?text=Article+1"
-              alt="Featured article"
-            />
-            <span class="badge">TECHNOLOGY</span>
-            <h3>Innovations in AI</h3>
-            <div class="meta">
-              By Jane Doe · <time datetime="06-10">June 10</time> · 5 min read
-            </div>
+    <main>
+      <!-- II. Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="live-features">
+            <span id="greeting"></span>
+            <div class="divider"></div>
+            <span id="location-weather"></span>
+          </div>
+          <h1>Your Compass to Knowledge</h1>
+          <p>
+            Explore 20 Niches, Curated Daily. Dive deep into technology,
+            finance, travel, health, and more. Personalized insights and curated
+            content tailored for you.
+          </p>
+          <div class="hero-buttons">
+            <a href="#niches" class="btn btn-primary">Start Exploring Now</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- III. Core Value Proposition / About Section -->
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div class="about-text">
+            <h2>Navigate Your World of Interests, Curated for You.</h2>
             <p>
-              How AI is redefining industries in 2025 with new breakthroughs.
+              "The Niche Navigator" is your ultimate destination for
+              high-quality, reliable, and engaging content. We meticulously
+              research and craft in-depth articles across 20 diverse niches,
+              ensuring every piece is not just informative but also optimized
+              for discovery.
             </p>
-            <button class="btn-article">Read Article</button>
           </div>
+          <div class="about-visual">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop
+                    offset="0%"
+                    style="stop-color: #0056b3; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #003d82; stop-opacity: 1"
+                  />
+                </linearGradient>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ffc107; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #e6ac00; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                d="M 20 50 Q 50 10, 80 50 T 140 50"
+                stroke="url(#grad1)"
+                fill="none"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <path
+                d="M 40 80 Q 70 40, 100 80 T 160 80"
+                stroke="url(#grad2)"
+                fill="none"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-dasharray="5 5"
+              />
+              <path
+                d="M 60 110 Q 90 70, 120 110 T 180 110"
+                stroke="url(#grad1)"
+                fill="none"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <circle cx="20" cy="50" r="5" fill="url(#grad2)" />
+              <circle cx="140" cy="50" r="5" fill="url(#grad2)" />
+              <circle cx="100" cy="80" r="5" fill="url(#grad1)" />
+              <circle cx="180" cy="110" r="5" fill="url(#grad2)" />
+            </svg>
+          </div>
+        </div>
+      </section>
 
-          <div class="carousel-card">
-            <img
-              src="https://placehold.co/300x180/FFC107/212529?text=Article+2"
-              alt="Featured article"
-            />
-            <span class="badge">LITERATURE</span>
-            <h3>Rediscovering Classic Fiction</h3>
-            <div class="meta">
-              By John Smith · <time datetime="06-02">June 2</time> · 7 min read
+      <!-- IV. Key Features Showcase -->
+      <section id="features" class="section features-section">
+        <div class="container">
+          <h2>Beyond Reading: Experience Knowledge Differently.</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <i data-feather="sun" style="width: 32px; height: 32px"></i>
+              </div>
+              <h3>Personalized Weather Hub</h3>
+              <p>
+                Get real-time weather updates for your location, seamlessly
+                integrated into your daily reading experience.
+              </p>
             </div>
-            <p>
-              A journey into tales that continue to shape our world and thought.
-            </p>
-            <button class="btn-article">Read Article</button>
-          </div>
-
-          <div class="carousel-card">
-            <img
-              src="https://placehold.co/300x180/212529/F8F9FA?text=Article+3"
-              alt="Featured article"
-            />
-            <span class="badge">HEALTH</span>
-            <h3>The Science of Wellness</h3>
-            <div class="meta">
-              By Emily White · <time datetime="05-28">May 28</time> · 8 min read
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <i data-feather="bell" style="width: 32px; height: 32px"></i>
+              </div>
+              <h3>Daily Insights & Notifications</h3>
+              <p>
+                Stay ahead with tailored notifications on new articles and
+                topics that matter most to you.
+              </p>
             </div>
-            <p>
-              Understanding holistic approaches to a healthier, balanced life.
-            </p>
-            <button class="btn-article">Read Article</button>
-          </div>
-
-          <div class="carousel-card">
-            <img
-              src="https://placehold.co/300x180/0056B3/FFFFFF?text=Article+4"
-              alt="Featured article"
-            />
-            <span class="badge">FINANCE</span>
-            <h3>Decoding Crypto Trends</h3>
-            <div class="meta">
-              By Michael Brown · <time datetime="05-20">May 20</time> · 10 min
-              read
+            <div class="feature-card">
+              <div class="feature-icon-wrapper">
+                <i data-feather="mail" style="width: 32px; height: 32px"></i>
+              </div>
+              <h3>Curated Newsletters</h3>
+              <p>
+                Receive weekly digests from your favorite niches, hand-picked by
+                our editors, delivered to your inbox.
+              </p>
             </div>
-            <p>
-              Insights into the volatile world of cryptocurrencies and
-              blockchain.
-            </p>
-            <button class="btn-article">Read Article</button>
           </div>
         </div>
-        <button class="carousel-arrow right" onclick="moveCarousel(1)">
-          ›
-        </button>
-      </div>
-    </section>
+      </section>
 
-    <!-- DIVE INTO YOUR NICHE -->
-    <section id="niches" class="niches container">
-      <h2>Dive Into Your Niche</h2>
-      <p>
-        Explore the topics that ignite your curiosity and fuel your passion,
-        expertly curated for you.
-      </p>
-      <div class="grid">
-        <!-- This is the niche container: it is a grid container -->
-        <div class="niche-card">
-          <div class="niche-ball">
-            <i class="fa-solid fa-microchip"></i>
-          </div>
-          <h3>Technology</h3>
+      <!-- V. Explore Niches Section -->
+      <section id="niches" class="section niches-section">
+        <div class="container">
+          <h2>Your Interests, Our Expertise. All in One Place.</h2>
           <p>
-            The latest trends and deep dives into tech innovations shaping the
-            future.
+            Discover in-depth articles across our carefully selected
+            high-ranking niches.
           </p>
-          <button class="btn-niche">Explore Niche</button>
-        </div>
-
-        <div class="niche-card">
-          <div class="niche-ball">
-            <i class="fa-solid fa-palette"></i>
+          <div id="niche-grid">
+            <!-- Niche Cards will be generated by JS -->
           </div>
-          <h3>Art & Culture</h3>
-          <p>
-            Stories that shape the human experience, from classical arts to
-            modern expressions.
-          </p>
-          <button class="btn-niche">Explore Niche</button>
-        </div>
-
-        <div class="niche-card">
-          <div class="niche-ball">
-            <i class="fa-solid fa-arrow-up-right-dots"></i>
-          </div>
-          <h3>Personal Growth</h3>
-          <p>
-            Strategies and insights for self-improvement and holistic
-            well-being.
-          </p>
-          <button class="btn-niche">Explore Niche</button>
-        </div>
-
-        <div class="niche-card">
-          <div class="niche-ball">
-            <i class="fa-solid fa-plane"></i>
-          </div>
-          <h3>World Travel</h3>
-          <p>
-            Discover breathtaking destinations and practical tips for global
-            adventurers.
-          </p>
-          <button class="btn-niche">Explore Niche</button>
-        </div>
-      </div>
-      <button class="btn-primary" style="margin-top: 2rem">
-        View All Niches
-      </button>
-    </section>
-
-    <!-- LATEST ARTICLES -->
-    <section id="latest" class="container">
-      <h2>Latest Articles</h2>
-      <div class="articles-grid" id="article-grid">
-        <!-- Example article -->
-        <div class="article-card">
-          <img
-            src="https://placehold.co/300x180/FFC107/212529?text=Latest+1"
-            alt="Article"
-          />
-          <span class="badge">HEALTH</span>
-          <h3>Wellness in the Modern Age</h3>
-          <div class="meta">By Alex Green • June 8 • 6 min read</div>
-          <p>
-            Discover new habits that promote long-term health and balance in
-            daily life.
-          </p>
-          <div class="actions">
-            <button class="icon-btn">
-              <i class="fa-solid fa-thumbs-up"></i>
-            </button>
-            <button class="icon-btn">
-              <i class="fa-solid fa-comment"></i>
-            </button>
-            <button class="icon-btn">
-              <i class="fa-solid fa-share"></i>
-            </button>
-            <button class="icon-btn" onclick="toggleSave(this)">
-              <i class="fa-solid fa-bookmark"></i>
-            </button>
+          <div class="btn-view-all">
+            <a href="#" class="btn btn-primary">View All Niches</a>
           </div>
         </div>
-        <div class="article-card">
-          <img
-            src="https://placehold.co/300x180/0056B3/FFFFFF?text=Latest+2"
-            alt="Article"
-          />
-          <span class="badge">SCIENCE</span>
-          <h3>The Mysteries of Dark Matter</h3>
-          <div class="meta">By Dr. S. Patel • June 7 • 9 min read</div>
-          <p>
-            An exploration into the elusive substance that holds galaxies
-            together.
-          </p>
-          <div class="actions">
-            <button class="icon-btn">
-              <i class="fa-solid fa-thumbs-up"></i>
-            </button>
-            <button class="icon-btn">
-              <i class="fa-solid fa-comment"></i>
-            </button>
-            <button class="icon-btn">
-              <i class="fa-solid fa-share"></i>
-            </button>
-            <button class="icon-btn" onclick="toggleSave(this)">
-              <i class="fa-solid fa-bookmark"></i>
-            </button>
+      </section>
+
+      <!-- VI. Featured Articles Section -->
+      <section id="featured" class="section">
+        <div class="container">
+          <div class="featured-header">
+            <h2>Top Reads This Week</h2>
+            <div class="carousel-buttons">
+              <button id="carousel-prev">
+                <i data-feather="arrow-left"></i>
+              </button>
+              <button id="carousel-next">
+                <i data-feather="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="carousel-container">
+            <div id="carousel-track">
+              <!-- Article Cards generated by JS -->
+            </div>
           </div>
         </div>
-        <div class="article-card">
-          <img
-            src="https://placehold.co/300x180/212529/F8F9FA?text=Latest+3"
-            alt="Article"
-          />
-          <span class="badge">FOOD</span>
-          <h3>Future of Sustainable Agriculture</h3>
-          <div class="meta">By M. Sharma • June 5 • 7 min read</div>
+      </section>
+
+      <!-- NEW: Newsletter Section -->
+      <section id="newsletter" class="section newsletter-section">
+        <div class="container">
+          <h2>Stay Ahead of the Curve</h2>
           <p>
-            Innovative farming techniques aimed at feeding the world
-            responsibly.
+            Subscribe to our newsletter to get the latest articles, insights,
+            and updates delivered straight to your inbox.
           </p>
-          <div class="actions">
-            <button class="icon-btn">
-              <i class="fa-solid fa-thumbs-up"></i>
-            </button>
-            <button class="icon-btn">
-              <i class="fa-solid fa-comment"></i>
-            </button>
-            <button class="icon-btn">
-              <i class="fa-solid fa-share"></i>
-            </button>
-            <button class="icon-btn" onclick="toggleSave(this)">
-              <i class="fa-solid fa-bookmark"></i>
-            </button>
-          </div>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
         </div>
-      </div>
-      <div id="load-spinner" class="spinner" style="display: none"></div>
-    </section>
+      </section>
 
-    <!-- PERSONAL / SIGNUP SECTION -->
-    <section class="personal container">
-      <h2>Just For You, Reader</h2>
-      <p>
-        Recommendations based on your interests will appear here—join and
-        personalize your experience!
-      </p>
-      <button class="btn-primary">View All Recommendations</button>
-    </section>
+      <!-- VII. Final Call to Action -->
+      <section class="section cta-section">
+        <div class="container">
+          <h2>Ready to Navigate Your Next Big Idea?</h2>
+          <p>Sign up for free and unlock a world of curated knowledge.</p>
+          <a href="#" class="btn-cta">Sign Up For Free</a>
+        </div>
+      </section>
+    </main>
 
-    <!-- NEWSLETTER SIGNUP -->
-    <section id="newsletter" class="newsletter container">
-      <h3>Stay Updated. Get Exclusive Insights.</h3>
-      <p>
-        Join our weekly newsletter for hand-picked articles, niche trends, and
-        special updates.
-      </p>
-      <form onsubmit="subscribeNewsletter(event)">
-        <input type="email" placeholder="Enter your email address" required />
-        <button type="submit" class="btn-subscribe">Subscribe</button>
-      </form>
-      <p id="newsletter-message"></p>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- VIII. Footer -->
     <footer>
-      <div class="footer-container">
-        <div class="footer-section footer-logo-section">
-          <div class="logo">Niche Navigator</div>
-          <p>Your compass in the world of niche discovery.</p>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="#" class="logo-link" style="color: white">
+              <svg
+                class="logo-icon"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="logo-grad-footer"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" style="stop-color: #0056b3" />
+                    <stop offset="100%" style="stop-color: #003d82" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M50 0 L61.8 38.2 L100 50 L61.8 61.8 L50 100 L38.2 61.8 L0 50 L38.2 38.2 Z"
+                  fill="url(#logo-grad-footer)"
+                />
+                <circle cx="50" cy="50" r="12" fill="#FFC107" />
+              </svg>
+              <span>The Niche Navigator</span>
+            </a>
+            <p>Your compass to knowledge across every field.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#niches">Niches</a></li>
+              <li><a href="#featured">Articles</a></li>
+              <li><a href="#features">Features</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">Our Mission</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="footer-section">
-          <h4>Explore Blog</h4>
-          <a href="#latest">Latest Articles</a>
-          <a href="#niches">Niches</a>
-          <a href="#">Categories</a>
+        <div class="footer-bottom">
+          <div class="footer-socials">
+            <h3 class="footer-links">Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i data-feather="twitter"></i></a>
+              <a href="#"><i data-feather="facebook"></i></a>
+              <a href="#"><i data-feather="linkedin"></i></a>
+            </div>
+          </div>
+          <p class="footer-copyright">
+            &copy; 2025 The Niche Navigator. All rights reserved.
+          </p>
         </div>
-        <div class="footer-section">
-          <h4>About Us</h4>
-          <a href="#">Our Story</a>
-          <a href="#">The Team</a>
-          <a href="#">Careers</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="footer-section">
-          <h4>Support & Legal</h4>
-          <a href="#">FAQ</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-      <div class="footer-bottom-section">
-        <div class="social-icons">
-          <a href="#" class="social-link"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-          <a href="#" calss="social-link"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-          <a href="#" class="social-link"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </div>
-        <p class="copyright">
-          &copy; 2025 The Niche Navigator. All rights reserved.
-        </p>
       </div>
     </footer>
 
-    <button id="back-to-top" class="back-to-top" onclick="goTop()">
-      &UpArrow;
-    </button>
-
-    <!-- ========== SCRIPTS ========== -->
     <script src="script.js"></script>
   </body>
 </html>
